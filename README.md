@@ -1,27 +1,51 @@
-# SAS Studio Custom Steps
+# Natural Language Processing (NLP) - Design LLM Prompt
 
-## Overview
+This custom step enables you to customize your prompts for a Large Language Model of choice to generate desired output. Prompt engineering is a practice of designing and optimizing prompts to elicit specifc response from generative models such as Large Language Models. 
 
-A custom step enables you to create a user interface for SAS Studio on SAS Viya users at your site to complete a specific task. Custom steps are saved to SAS Content, so they can be shared with others at your site. The Steps panel lists all SAS steps available to a user, including custom steps.
-See [SAS Demo - Create a Custom Step in SAS Studio on SAS Viya (YouTube)](https://www.youtube.com/watch?v=vkI0mysfAkQ) for a quick introduction. For more details see [SAS Documentation on Custom Steps in SAS Studio](https://documentation.sas.com/?cdcId=webeditorcdc&cdcVersion=default&docsetId=webeditorsteps&docsetTarget=titlepage.htm). 
+You can use this custom step for prompt engineering on foundation models with your own data to enhance the relevance of Large Language Model for your specific task.
 
-## List of Contributions
+## User Interface
 
-[List of custom steps in this repository](./CUSTOM_STEPS_LIST.md)
+### Parameters tab
+![](img/Parameters-Tab.png)
 
-## Getting Started - Making a Custom Step from this repository available in SAS Studio 
+### Configuration tab
+![](img/Configuration-Tab.png)
 
-Follow the instructions on [Using a Custom Step from this GitHub repository in SAS Studio](./docs/IMPORT_CUSTOM_STEP.md) to download custom steps from this repository and make them available for use in your SAS Studio environment.
+### About tab
+![](img/About-Tab.png)
 
-## Contributing
 
-We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to submit contributions to this project.
+## SAS Viya version support
 
-## License
+Tested in Viya 4 Stable 2023.12
 
-This project is licensed under the [Apache 2.0 License](LICENSE).
+## Requirements
+
+- [ ] A SAS Viya 4 environment (monthly release 2023.12 or later) with SAS Studio Flows.
+- [ ] A python environment (Python 3.8 or later), with the required packages installed, configured for use in SAS Studio.  
+
+### Python packages
+- pandas
+- aiohttp
+- asyncio
+- json
+- re
+
+### Supported data source
+This custom step runs on tables found in the SAS compute library.
+
+
+## Getting Started - Make this custom step available in SAS Studio
+
+Follow the instructions on [Using a Custom Step from this GitHub repository in SAS Studio](https://github.com/sassoftware/sas-studio-custom-steps/blob/main/docs/IMPORT_CUSTOM_STEP.md) to download custom steps from this repository and make them available for use in your SAS Studio environment.
 
 ## Additional Resources
+- [Configuring the Python environment](https://go.documentation.sas.com/doc/en/sasadmincdc/v_048/calsrvpgm/p1iu2rzpk1j1b4n1shfqxpqzyso4.htm)
+- [Making the Python environment available in SAS Programming Runtime](https://go.documentation.sas.com/doc/en/sasadmincdc/v_048/calsrvpgm/n1a7ados7ybdn1n15f0td8twwca9.htm)
 
-* [SAS Documentation on Custom Steps in SAS Studio](https://documentation.sas.com/?cdcId=webeditorcdc&cdcVersion=default&docsetId=webeditorsteps&docsetTarget=titlepage.htm)
-* [SAS Demo - Create a Custom Step in SAS Studio on SAS Viya (YouTube)](https://www.youtube.com/watch?v=vkI0mysfAkQ)
+## License
+This project is licensed under the [Apache 2.0 License](https://github.com/sassoftware/sas-studio-custom-steps/blob/main/LICENSE).
+
+## Change Log
+Version: 1.2 (02FEB2023)
